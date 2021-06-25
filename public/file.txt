@@ -1,0 +1,51 @@
+// var data = [
+    //     <?php foreach ($lokasi as $key => $data){ ?>
+    //         {"coordinat":[<?= $data->posisi ?>],"Nama Wisata":"<?= $data->nama_wisata ?>" },
+    //     <?php } ?>
+    // ];
+
+    // var map = new L.Map('map', {zoom: 9,layers: [peta2], center: new L.latLng(-7.499256541508711, 112.53985451549833) });
+
+    // var baseMaps = {
+    //     "Grayscale": peta1,
+    //     "Satelite": peta2,
+    //     "Streets": peta3,
+    //     "Dark": peta4,
+    // };
+
+    // L.control.layers(baseMaps).addTo(map);
+
+
+    // var markersLayer = new L.LayerGroup();
+	// map.addLayer(markersLayer);
+
+	// var controlSearch = new L.Control.Search({
+	// 	position:'topright',
+	// 	layer: markersLayer,
+	// 	initial: false,
+	// 	zoom: 12,
+	// 	marker: false
+	// });
+	// map.addControl( controlSearch );
+
+    // @foreach ($wisata as $data)
+
+    // var iconwisata = L.icon({
+    //         iconUrl : 'wisata.png',
+    //         iconSize : [40, 40],
+    //     });
+    //     var informasi = '<table class="table table-bordered"><tr><td colspan="2"><img src="{{ asset('foto') }}/{{ $data->foto }}" width="250px"></th></tr><tbody><tr><td><span>Nama Wisata</span></td><td>{{ $data->nama_wisata }}</td></tr><</tbody></table>';
+    //     L.marker([<?= $data->posisi ?>], {icon : iconwisata})
+    //     .addTo(map)
+    //     .bindPopup(informasi);
+
+    // @endforeach
+    // //populate map with markers from sample data
+	// for(i in data) {
+	// 	var nama        = data[i].nama_wisata;	//value searched
+	// 	var	lokasi      = data[i].posisi;		//position found
+	// 	var	marker      = new L.Marker(new L.latLng(lokasi), {title: nama} );//se property searched
+	// 	marker.bindPopup('Nama Wisata: '+ nama );
+	// 	markersLayer.addLayer(marker);
+	// }
+
