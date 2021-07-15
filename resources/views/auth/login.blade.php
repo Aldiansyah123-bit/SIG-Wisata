@@ -17,7 +17,6 @@
     <p class="login-box-msg">Sign in to start your session</p>
     <form method="POST" action="{{ route('login') }}">
         @csrf
-
         <div class="mb-3 input-group">
             <input id="email" type="email" name="email" :value="old('email')" class="form-control" placeholder="Email" required autofocus>
             <div class="input-group-append">
@@ -46,15 +45,6 @@
             <div class="col-4">
                 <button type="submit" class="btn btn-primary btn-block">{{ __('Log in') }}</button>
             </div>
-        </div>
-
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('register'))
-                <a class="text-sm text-gray-600 underline hover:text-gray-900" href="{{ route('register') }}">
-                    {{ __('New Account') }}
-                </a>
-            @endif
         </div>
     </form>
 </div>

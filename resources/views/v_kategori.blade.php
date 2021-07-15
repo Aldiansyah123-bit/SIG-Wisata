@@ -84,7 +84,7 @@
 			iconUrl     : '{{ asset('logo') }}/{{ $data->logo }}',
 			iconSize    : [60, 60],
 		});
-		var informasi = '<table class="table table-bordered"><tr><td colspan="2"><img src="{{ asset('foto') }}/{{ $data->foto }}" width="250px"></th></tr><tbody><tr><td><span>Nama Wisata</span></td><td>{{ $data->nama_wisata }}</td></tr><tr><td colspan="2" class="text-center"><a href="/detailwisata/{{ $data->id }}" class="btn btn-sm btn-default">Detail</a></td></tr></tbody></table>';
+		var informasi = '<table class="table table-bordered"><tr><td colspan="2"><img src="{{ asset('foto') }}/{{ $data->foto }}" width="250px"></th></tr><tbody><tr><td><span>Nama Wisata</span></td><td>{{ $data->nama_wisata }}</td></tr><tr><td>Kategori</td><td>{{ $data->kategori }}</td></tr><tr><td>Kabupaten/Kota</td><td>{{ $data->kabkota }}</td></tr><tr><td colspan="2" class="text-center"><a href="/detailwisata/{{ $data->id }}" class="btn btn-sm btn-default">Detail</a></td></tr></tbody></table>';
 		L.marker([<?= $data->posisi ?>], {icon : iconwisata})
 		.addTo(map)
 		.bindPopup(informasi);

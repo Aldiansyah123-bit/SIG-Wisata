@@ -54,7 +54,7 @@ class Frontend extends Model
         return DB::table('wisatas')
             ->join('kategoriwisatas', 'kategoriwisatas.id', '=', 'wisatas.id_kategori')
             ->join('kab_kotas', 'kab_kotas.id', '=', 'wisatas.id_kabkota')
-            ->get(['wisatas.*','kategoriwisatas.kategori','kab_kotas.logo','wisatas.nama_wisata','wisatas.posisi']);
+            ->get(['wisatas.*','kategoriwisatas.kategori','kab_kotas.logo','wisatas.nama_wisata','wisatas.posisi','kab_kotas.kabkota']);
     }
 
     public function DetailWisata($id)

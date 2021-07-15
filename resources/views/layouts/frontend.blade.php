@@ -50,9 +50,32 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
   crossorigin=""></script>
+<style type="text/css">
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background-color: #fff;
+    }
+    .preloader .loading {
+      position: absolute;
+      left: 40%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      font: 14px arial;
+    }
+</style>
 
 </head>
 <body class="hold-transition layout-top-nav">
+    <div class="preloader">
+        <div class="text-center loading">
+          <img src="{{ asset('preloading.gif') }}" width="200%">
+        </div>
+      </div>
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -99,13 +122,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </ul>
       </div>
       <!-- Right navbar links -->
-      <ul class="order-1 ml-auto order-md-3 navbar-nav navbar-no-expand">
+      {{-- <ul class="order-1 ml-auto order-md-3 navbar-nav navbar-no-expand">
         <li class="nav-item">
           <a class="nav-link" href=" {{ route('login') }} ">
             <i class="fas fa-user"></i> Login
           </a>
         </li>
-      </ul>
+      </ul> --}}
   </nav>
   <!-- /.navbar -->
 
@@ -139,7 +162,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
-
+<script>
+    //Preloading
+    $(document).ready(function(){
+      $(".preloader").fadeOut();
+    })
+</script>
 
 </body>
 </html>
