@@ -112,7 +112,7 @@ class KategoriwisataController extends Controller
                 'kategori'  => $request->kategori,
             ]);
 
-            return redirect('kategori')->with('status', 'Data Berhasil Disimpan !!!');
+            return redirect('kategori')->with('status', 'Data Berhasil Di Update !!!');
     }
 
     /**
